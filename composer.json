@@ -1,0 +1,22 @@
+{
+    "name": "videorecruit/phalcon-links",
+    "type": "library",
+    "description": "Links generator for Phalcon Framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukas Tomek",
+            "email": "tomeklukas@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-phalcon": "*",
+        "league/uri": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "VideoRecruit\\": "src/"
+        }
+    }
+}
