@@ -111,11 +111,11 @@ class LinkGenerator
 		if ($usingTrustedProxy) {
 			if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
 				$scheme = strcasecmp($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') === 0 ? 'https' : 'http';
-				$this->url->withScheme($scheme);
+				$this->url = $this->url->withScheme($scheme);
 			}
 
 			if (!empty($_SERVER['HTTP_X_FORWARDED_PORT'])) {
-				$this->url->withPort((int) $_SERVER['HTTP_X_FORWARDED_PORT']);
+				$this->url = $this->url->withPort((int) $_SERVER['HTTP_X_FORWARDED_PORT']);
 			}
 		}
 	}
