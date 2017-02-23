@@ -77,7 +77,7 @@ class LinkGenerator
 
 		if (count(explode(':', $path)) !== 0) {
 			$resolverParams[0] = array_merge($params, [
-				'for' => strtolower($path),
+				'for' => $path,
 			]);
 			$resolverParams[1] = NULL;
 		}
